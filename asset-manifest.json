@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wheel-of-standup/static/css/main.e6c13ad2.css",
+    "main.js": "/wheel-of-standup/static/js/main.f298979a.js",
+    "static/js/787.901b8e5f.chunk.js": "/wheel-of-standup/static/js/787.901b8e5f.chunk.js",
+    "index.html": "/wheel-of-standup/index.html",
+    "main.e6c13ad2.css.map": "/wheel-of-standup/static/css/main.e6c13ad2.css.map",
+    "main.f298979a.js.map": "/wheel-of-standup/static/js/main.f298979a.js.map",
+    "787.901b8e5f.chunk.js.map": "/wheel-of-standup/static/js/787.901b8e5f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f298979a.js"
+  ]
+}
