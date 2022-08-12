@@ -1,4 +1,5 @@
 {
+  "homepage": "http://raulsanchez1024.github.io/wheel-of-standup",
   "name": "wheel-of-standup",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +27,9 @@
     "start": "react-scripts start",
     "defuck": "rm -rf node_modules && npm i",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
