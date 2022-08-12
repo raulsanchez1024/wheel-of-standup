@@ -1,26 +1,17 @@
 import { useState } from "react";
 import { Wheel } from "react-custom-roulette";
+import { Link } from "react-router-dom";
+import { useAppSelector } from "../../app/hooks";
+import { Button } from "../../components/Button";
 
 import * as Styled from "./styles";
 
 export const Home = () => {
+  const team = useAppSelector((state) => state.team);
   const [mustSpin, setMustSpin] = useState(false);
   const [prizeNumber, setPrizeNumber] = useState(null);
   const [stopped, setStopped] = useState(false);
-  const [data, setData] = useState([
-    { option: "Raul" },
-    { option: "Dan" },
-    { option: "Nate" },
-    { option: "Lily" },
-    { option: "Cindy" },
-    { option: "Karen" },
-    { option: "Renee" },
-    { option: "Neeraj" },
-    { option: "Jeremy" },
-    { option: "Rosse" },
-    { option: "Matt" },
-    { option: "Anita" },
-  ]);
+  const [data, setData] = useState(team);
   const winner = data[prizeNumber]?.option;
 
   const removeWinner = () => {
@@ -38,6 +29,11 @@ export const Home = () => {
 
   return (
     <>
+      <Styled.Nav>
+        <ul>
+          <Link to="/team">Team</Link>
+        </ul>
+      </Styled.Nav>
       <Styled.Container>
         <Styled.PageTitle>Wheel Of Standup</Styled.PageTitle>
         <h3>Question of the day:</h3>
@@ -62,7 +58,7 @@ export const Home = () => {
           spinDuration={0.2}
         />
         {stopped && <h1>Up next: {data[prizeNumber]?.option}</h1>}
-        <Styled.Button onClick={handleSpinClick}>SPIN</Styled.Button>
+        <Button onClick={handleSpinClick}>SPIN</Button>
       </Styled.Container>
     </>
   );

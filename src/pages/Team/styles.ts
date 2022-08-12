@@ -1,28 +1,25 @@
 import styled from "styled-components";
 import { flexbox } from "../../styles/helpers/mixins";
 
-export const PageTitle = styled.h1`
-  font-family: "Monoton", cursive;
-  background-image: linear-gradient(
-    to left,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
 export const Container = styled.div`
   ${flexbox({
     direction: "column",
     justifyContent: "center",
     alignItems: "center",
   })};
+`;
+
+export const TeamList = styled.ul`
+  list-style: none;
+`;
+
+export const TeamMember = styled.div`
+  ${flexbox({ alignItems: "center" })};
+  margin-bottom: ${({ theme }) => theme.space(2)};
+
+  li {
+    margin-right: ${({ theme }) => theme.space(1)};
+  }
 `;
 
 export const Nav = styled.nav`
