@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { flexbox } from "../../styles/helpers/mixins";
 
 export const Button = styled.button`
   background-color: #5e2fff;
   color: #f7f9ff;
   border: none;
-  padding: 16px;
+  padding: ${({ theme }) => theme.space(2)};
   font-weight: 600;
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.space(3)};
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.space(1)};
   transition: all 0.2s ease-in-out;
   margin: 16px;
 
@@ -39,8 +40,9 @@ export const PageTitle = styled.h1`
 `;
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  ${flexbox({
+    direction: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  })};
 `;
