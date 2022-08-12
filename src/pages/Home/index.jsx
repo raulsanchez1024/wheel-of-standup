@@ -59,7 +59,6 @@ export const Home = () => {
             "yellow",
             "blue",
           ]}
-          // backgroundColors={["#A8A8F8", "#b0e0e6", "#bada55", "#ffb3ba"]}
           spinDuration={0.2}
         />
         {stopped && <h1>Up next: {data[prizeNumber]?.option}</h1>}
