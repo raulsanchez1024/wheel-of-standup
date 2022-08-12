@@ -1,8 +1,8 @@
 {
-  "homepage": "https://raulsanchez1024.github.io/wheel-of-standup",
   "name": "wheel-of-standup",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://raulsanchez1024.github.io/wheel-of-standup",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
     "@testing-library/jest-dom": "^5.16.5",
