@@ -25,7 +25,18 @@ export const Container = styled.div`
   })};
 `;
 
-export const Nav = styled.nav`
-  ${flexbox({ justifyContent: "flex-end" })}
-  margin: 0 32px;
+export const QuestionOfTheDay = styled.div`
+  ${flexbox({
+    direction: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  })};
+
+  h3 {
+    margin-bottom: 0;
+  }
+
+  a {
+    margin: ${({ theme }) => theme.space(2)};
+  }
 `;

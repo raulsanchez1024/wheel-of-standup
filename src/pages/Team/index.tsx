@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { teamActions } from "../../features/team/slice";
 import { Button } from "../../components/Button";
+import { Nav } from "../../components/Nav";
 
 import * as Styled from "./styles";
 
@@ -13,11 +14,7 @@ export const Team = () => {
 
   return (
     <>
-      <Styled.Nav>
-        <ul>
-          <Link to="/">Home</Link>
-        </ul>
-      </Styled.Nav>
+      <Nav />
       <Styled.Container>
         <h1>Team</h1>
         <Styled.TeamList>

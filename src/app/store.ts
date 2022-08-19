@@ -1,8 +1,10 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import { questionReducer } from "../features/question/slice";
 import { teamReducer } from "../features/team/slice";
 
 export const store = configureStore({
   reducer: {
+    question: questionReducer,
     team: teamReducer,
   },
 });

@@ -13,7 +13,6 @@ const initialState: TeamState = [
   { option: "Karen" },
   { option: "Renee" },
   { option: "Neeraj" },
-  { option: "Jeremy" },
   { option: "Rosse" },
   { option: "Matt" },
   { option: "Anita" },

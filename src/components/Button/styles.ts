@@ -6,7 +6,7 @@ export const Button = styled.button`
   border: none;
   padding: ${({ theme }) => theme.space(2)};
   font-weight: 600;
-  font-size: ${({ theme }) => theme.space(3)};
+  font-size: ${({ theme }) => theme.space(2)};
   cursor: pointer;
   border-radius: ${({ theme }) => theme.space(1)};
   transition: all 0.2s ease-in-out;
