@@ -44,18 +44,6 @@ export const Container = styled.nav`
 
 export const Logo = styled.h1`
   font-size: 24px;
-  /* background-image: linear-gradient(
-    to left,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: #100045;
   cursor: pointer;
 `;

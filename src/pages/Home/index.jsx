@@ -30,7 +30,7 @@ export const Home = () => {
       <Nav />
       <Styled.Container>
         <Styled.QuestionOfTheDay>
-          <h3>Question of the day:</h3>
+          <h3>Question of the day</h3>
           {question ? (
             <p>{question}</p>
           ) : (
