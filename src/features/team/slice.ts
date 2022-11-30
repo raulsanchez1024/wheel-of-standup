@@ -10,12 +10,10 @@ const initialState: TeamState = [
   { option: "Nate" },
   { option: "Lily" },
   { option: "Cindy" },
-  { option: "Karen" },
-  { option: "Renee" },
   { option: "Neeraj" },
   { option: "Rosse" },
   { option: "Matt" },
-  { option: "Anita" },
+  { option: "Marjorie" },
 ];
 
 export const teamSlice = createSlice({

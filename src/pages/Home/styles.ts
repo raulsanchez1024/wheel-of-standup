@@ -1,21 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { Button } from "../../components/Button";
 import { flexbox } from "../../styles/helpers/mixins";
-
-export const PageTitle = styled.h1`
-  font-family: "Monoton", cursive;
-  background-image: linear-gradient(
-    to left,
-    violet,
-    indigo,
-    blue,
-    green,
-    yellow,
-    orange,
-    red
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
 
 export const Container = styled.div`
   ${flexbox({
@@ -39,4 +24,12 @@ export const QuestionOfTheDay = styled.div`
   a {
     margin: ${({ theme }) => theme.space(2)};
   }
+`;
+
+export const SpinButton = styled(Button)<{ $disabled: boolean }>`
+  ${({ $disabled }) =>
+    $disabled &&
+    css`
+      background-color: #000;
+    `}
 `;

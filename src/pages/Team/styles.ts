@@ -11,6 +11,14 @@ export const Container = styled.div`
 
 export const TeamList = styled.ul`
   list-style: none;
+
+  button {
+    margin: 0;
+  }
+`;
+
+export const TeamMemberName = styled.li`
+  width: 80px;
 `;
 
 export const TeamMember = styled.div`
@@ -19,6 +27,27 @@ export const TeamMember = styled.div`
 
   li {
     margin-right: ${({ theme }) => theme.space(1)};
+  }
+`;
+
+export const FormContainer = styled.div`
+  ${flexbox({
+    direction: "row",
+    alignItems: "center",
+    justifyContent: "center",
+  })};
+  width: 100%;
+
+  input {
+    height: 28px;
+    width: 200px;
+    border-radius: ${({ theme }) => theme.space(1)};
+    border: 1px solid #696969;
+    transition: all 0.2s ease-in-out;
+  }
+
+  input:hover {
+    box-shadow: 0 0.25rem 0.75rem #a083ff;
   }
 `;
 

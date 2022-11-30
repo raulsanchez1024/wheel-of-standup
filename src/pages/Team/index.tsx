@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { teamActions } from "../../features/team/slice";
 import { Button } from "../../components/Button";
@@ -12,6 +11,13 @@ export const Team = () => {
   const team = useAppSelector((state) => state.team);
   const [newTeamMember, setNewTeamMember] = useState("");
 
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Enter") {
+      dispatch(teamActions.addTeamMember({ option: newTeamMember }));
+      setNewTeamMember("");
+    }
+  };
+
   return (
     <>
       <Nav />
@@ -20,28 +26,37 @@ export const Team = () => {
         <Styled.TeamList>
           {team.map((member) => (
             <Styled.TeamMember>
-              <li key={member.option}>{member.option}</li>
-              <button
+              <Styled.TeamMemberName key={member.option}>
+                {member.option}
+              </Styled.TeamMemberName>
+              <Button
                 onClick={() => dispatch(teamActions.removeTeamMember(member))}
+                size="small"
+                type="delete"
               >
                 Remove
-              </button>
+              </Button>
             </Styled.TeamMember>
           ))}
         </Styled.TeamList>
         <h2>Add Team Member</h2>
-        <input
-          type="text"
-          value={newTeamMember}
-          onChange={(e) => setNewTeamMember(e.target.value)}
-        />
-        <Button
-          onClick={() =>
-            dispatch(teamActions.addTeamMember({ option: newTeamMember }))
-          }
-        >
-          Add
-        </Button>
+        <Styled.FormContainer>
+          <input
+            type="text"
+            value={newTeamMember}
+            onChange={(e) => setNewTeamMember(e.target.value)}
+            onKeyDown={handleKeyDown}
+          />
+          <Button
+            onClick={() => {
+              dispatch(teamActions.addTeamMember({ option: newTeamMember }));
+              setNewTeamMember("");
+            }}
+            size="small"
+          >
+            Add
+          </Button>
+        </Styled.FormContainer>
       </Styled.Container>
     </>
   );

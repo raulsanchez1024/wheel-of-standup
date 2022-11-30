@@ -16,14 +16,10 @@ export const Home = () => {
   const [data, setData] = useState(team);
   const winner = data[prizeNumber]?.option;
 
-  const removeWinner = () => {
+  const handleSpinClick = () => {
     const newData = data.filter((item) => item.option !== winner);
     setData(newData);
-  };
-
-  const handleSpinClick = () => {
-    removeWinner();
-    const newPrizeNumber = Math.floor(Math.random() * data.length);
+    const newPrizeNumber = Math.floor(Math.random() * newData.length);
     setStopped(false);
     setPrizeNumber(newPrizeNumber);
     setMustSpin(true);
@@ -33,7 +29,6 @@ export const Home = () => {
     <>
       <Nav />
       <Styled.Container>
-        <Styled.PageTitle>Wheel Of Standup</Styled.PageTitle>
         <Styled.QuestionOfTheDay>
           <h3>Question of the day:</h3>
           {question ? (
@@ -46,23 +41,43 @@ export const Home = () => {
           mustStartSpinning={mustSpin}
           prizeNumber={prizeNumber}
           data={data}
-          textColors={["#fff", "#fff", "#fff", "#fff", "#000", "#fff"]}
           onStopSpinning={() => {
             setMustSpin(false);
             setStopped(true);
           }}
+          outerBorderWidth={[0]}
+          innerBorderColor={["#f2f2f2"]}
+          radiusLineColor={["tranparent"]}
+          radiusLineWidth={[1]}
+          textColors={[
+            "#f5f5f5",
+            "#f5f5f5",
+            "#f5f5f5",
+            "#f5f5f5",
+            "#f5f5f5",
+            "#000",
+          ]}
+          textDistance={55}
+          fontSize={[15]}
           backgroundColors={[
-            "red",
-            "green",
-            "purple",
-            "orange",
-            "yellow",
-            "blue",
+            "#3f297e",
+            "#175fa9",
+            "#169ed8",
+            "#239b63",
+            "#64b031",
+            "#efe61f",
+            "#f7a416",
+            "#e6471d",
+            "#dc0936",
+            "#e5177b",
+            "#be1180",
+            "#871f7f",
           ]}
           spinDuration={0.2}
         />
-        {stopped && <h1>Up next: {data[prizeNumber]?.option}</h1>}
-        <Button onClick={handleSpinClick}>Spin</Button>
+        <Button onClick={handleSpinClick} disabled={!stopped && prizeNumber}>
+          {stopped || !prizeNumber ? "Spin" : "Spinning..."}
+        </Button>
       </Styled.Container>
     </>
   );

@@ -17,6 +17,12 @@ export const Question = () => {
     navigate("/");
   };
 
+  const handleKeyDown = (e: any) => {
+    if (e.key === "Enter") {
+      onUpdateQuestion();
+    }
+  };
+
   return (
     <>
       <Nav />
@@ -27,8 +33,11 @@ export const Question = () => {
             type="text"
             value={question}
             onChange={(e) => setQuestion(e.target.value)}
+            onKeyDown={handleKeyDown}
           />
-          <Button onClick={onUpdateQuestion}>Update Question</Button>
+          <Button onClick={onUpdateQuestion} size="small">
+            Update Question
+          </Button>
         </Styled.FormContainer>
       </Styled.Container>
     </>
