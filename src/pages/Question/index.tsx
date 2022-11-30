@@ -17,6 +17,8 @@ export const Question = () => {
     navigate("/");
   };
 
+  console.log("I broke deployment");
+
   const handleKeyDown = (e: any) => {
     if (e.key === "Enter") {
       onUpdateQuestion();
