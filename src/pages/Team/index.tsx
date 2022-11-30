@@ -22,7 +22,7 @@ export const Team = () => {
     <>
       <Nav />
       <Styled.Container>
-        <h1>Team</h1>
+        <Styled.PageTitle>Team</Styled.PageTitle>
         <Styled.TeamList>
           {team.map((member) => (
             <Styled.TeamMember>

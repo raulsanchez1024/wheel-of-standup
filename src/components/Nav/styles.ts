@@ -11,7 +11,7 @@ export const Container = styled.nav`
   }
 
   a {
-    color: #696969;
+    color: #100045;
     text-decoration: none;
     display: inline-block;
     padding: 15px 20px;
@@ -44,7 +44,7 @@ export const Container = styled.nav`
 
 export const Logo = styled.h1`
   font-size: 24px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left,
     violet,
     indigo,
@@ -55,6 +55,7 @@ export const Logo = styled.h1`
     red
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #100045;
   cursor: pointer;
 `;

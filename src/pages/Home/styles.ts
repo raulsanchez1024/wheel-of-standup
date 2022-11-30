@@ -19,6 +19,7 @@ export const QuestionOfTheDay = styled.div`
 
   h3 {
     margin-bottom: 0;
+    color: #100045;
   }
 
   a {

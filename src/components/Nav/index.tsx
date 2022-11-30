@@ -9,7 +9,7 @@ export const Nav = () => {
     <Styled.Container>
       <ul>
         <Styled.Logo onClick={() => navigate("/")}>
-          Wheel of Standup
+          Wheel of Standup<span style={{ color: "#5e2fff" }}>.</span>
         </Styled.Logo>
         <div>
           <Link to="/">Home</Link>

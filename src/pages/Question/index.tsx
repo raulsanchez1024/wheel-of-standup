@@ -27,7 +27,7 @@ export const Question = () => {
     <>
       <Nav />
       <Styled.Container>
-        <h1>Question</h1>
+        <Styled.PageTitle>Question</Styled.PageTitle>
         <Styled.FormContainer>
           <input
             type="text"

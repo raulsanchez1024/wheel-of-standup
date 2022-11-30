@@ -9,6 +9,10 @@ export const Container = styled.div`
   })};
 `;
 
+export const PageTitle = styled.h1`
+  color: #100045;
+`;
+
 export const FormContainer = styled.div`
   ${flexbox({
     direction: "row",
@@ -23,6 +27,7 @@ export const FormContainer = styled.div`
     border-radius: ${({ theme }) => theme.space(1)};
     border: 1px solid #696969;
     transition: all 0.2s ease-in-out;
+    background-color: #f7f5ff;
   }
 
   input:hover {

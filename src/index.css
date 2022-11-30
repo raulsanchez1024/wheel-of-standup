@@ -4,6 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "poppins", cursive;
   color: #3d3d3d;
+  background-color: #f7f5ff;
 }
 
 code {
